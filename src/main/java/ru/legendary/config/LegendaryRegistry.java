@@ -8,7 +8,7 @@ import java.util.*;
 
 public class LegendaryRegistry {
 
-    private final private final Map<Category, List<LegendaryItem» byCategory = new EnumMap<>(Category.class);
+    private final Map<String, LegendaryItem> byId = new LinkedHashMap<>();
     private final Map<Category, List<LegendaryItem» byCategory = new EnumMap<>(Category.class);
 
     public LegendaryRegistry() {
@@ -37,7 +37,6 @@ public class LegendaryRegistry {
     public static LegendaryRegistry defaults() {
         LegendaryRegistry reg = new LegendaryRegistry();
 
-        // === ОБЫЧНЫЕ (пока 4 для теста) ===
         reg.register(new LegendaryItem("katana_dragon", "Катана дракона",
                 Material.NETHERITE_SWORD, Category.LEG, "legendary",
                 List.of("Обычная легендарка", "Способность: рывок")));
@@ -46,12 +45,10 @@ public class LegendaryRegistry {
                 Material.TRIDENT, Category.LEG, "legendary",
                 List.of("Обычная легендарка", "Дальний бой")));
 
-        // === МАЛЕНЬКИЕ ===
         reg.register(new LegendaryItem("smelting_pickaxe", "Плавильная кирка",
                 Material.DIAMOND_PICKAXE, Category.MINILEG, "legendary",
                 List.of("Маленькая вещь")));
 
-        // === ПРОБУЖДЁННЫЕ ===
         reg.register(new LegendaryItem("r_katana_dragon", "Катана дракона (Пробуждённая)",
                 Material.NETHERITE_SWORD, Category.LEGR, "legendary_awakened",
                 List.of("Пробуждённая легендарка", "Усиленная версия")));
@@ -59,8 +56,3 @@ public class LegendaryRegistry {
         return reg;
     }
 }
-
-
-
-
-
