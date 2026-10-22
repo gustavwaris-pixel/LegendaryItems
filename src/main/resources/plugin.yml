@@ -1,0 +1,37 @@
+name: HopliteLegends
+version: 1.0.0
+main: ru.hoplitelegends.HopliteLegends
+api-version: '1.21'
+author: YourName
+description: Легендарное оружие с сервера Hoplite
+
+commands:
+  leg:
+    description: Выдать все обычные легендарки
+    usage: /leg
+    permission: hoplitelegends.leg
+    permission-message: "§cУ тебя нет прав на эту команду!"
+  minileg:
+    description: Выдать все маленькие вещи
+    usage: /minileg
+    permission: hoplitelegends.minileg
+    permission-message: "§cУ тебя нет прав на эту команду!"
+  legr:
+    description: Выдать все пробуждённые легендарки
+    usage: /legr
+    permission: hoplitelegends.legr
+    permission-message: "§cУ тебя нет прав на эту команду!"
+
+permissions:
+  hoplitelegends.leg:
+    description: Доступ к команде /leg
+    default: op
+  hoplitelegends.minileg:
+    description: Доступ к команде /minileg
+    default: op
+  hoplitelegends.legr:
+    description: Доступ к команде /legr
+    default: op
+
+
+
