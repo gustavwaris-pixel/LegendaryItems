@@ -8,7 +8,7 @@ import java.util.*;
 
 public class LegendaryRegistry {
 
-    private final Map<String, LegendaryItem> byId = new LinkedHashMap<>();
+    private final private final Map<Category, List<LegendaryItem» byCategory = new EnumMap<>(Category.class);
     private final Map<Category, List<LegendaryItem» byCategory = new EnumMap<>(Category.class);
 
     public LegendaryRegistry() {
